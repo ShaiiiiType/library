@@ -7,20 +7,64 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello</h1>
-    <div class="for_inputs">
-        <label for="author">Author:</label>
-        <input type="text" name="author" id="author">
+    <h1>Project: Library📘</h1>
+    <p style="text-align: center;">A practice project where you can add list of books that you may or may not have read!😊</p>
+    <dialog>
+        <form id="formBook" method="dialog">
+            <h2 style="text-align: center">ADD BOOK</h2>
+            <div id="form_head">
+                
+                <div class="for_inputs">
+                    <label for="author">Author:</label>
+                    <input type="text" name="author" id="author" required>
+                </div>
+                <div class="for_inputs">
+                    <label for="title">Title:</label>
+                    <input type="text" name="title" id="title" required>
+                </div>
+                <div class="for_inputs">
+                    <label for="pages">No. of pages:</label>
+                    <input type="number" name="pages" id="pages" required>
+                </div>
+                <div class="for_inputs">
+                    <div class="checkbox-wrapper-2">
+                        <label for="read">Have read?</label>
+                        <input type="checkbox" name="read" id="read" class="sc-gJwTLC ikxBAC">
+                    </div>
+                </div>
+                <div class="the-buttons">
+                    <button id="AddBook" type="submit" value="confirm">Add new book</button>
+                    <button id="close" value="cancel" type="button">Close</button>
+                </div>
+            </div>
+        </form>
+    </dialog>
+
+
+
+    <div id="dad_bod">
+        <div id="upper">
+            <p><strong><span id="total_books">0</span></strong> Book(s)</p>
+            <button id="OpenAdd">Add a book</button>
+        </div>
+        <div id="contents_book">
+        </div>
+
     </div>
-    <div class="for_inputs">
-        <label for="title">Title:</label>
-        <input type="text" name="title" id="title">
-    </div>
-    <div class="for_inputs">
-        <label for="pages">No. of pages:</label>
-        <input type="number" name="pages" id="pages">
-    </div>
-    <button id="AddBook">Add new book</button>
+
+    <template id="book-template">
+        <div class="meow">
+            <div class="lol">
+                <p><strong>Title: </strong><span class="text-title">Hunger Games</span></p>
+                <p><strong>Author: </strong><span class="text-author">I dont know who</span></p>
+                <p><strong>No. of pages: </strong><span class="text-pages">553</span></p>
+            </div>
+            <div class="button_divs">
+                <button class="Have_Read">Did not read yet</button>
+                <button class="deletes">Delete</button>
+            </div>
+        </div>
+    </template>
 
     <script src="index.js"></script>
 </div>
